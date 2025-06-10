@@ -1,0 +1,8 @@
+arr = [10, 25, 5, 30, 15]
+max_element = arr[0]
+
+for num in arr[1:]:
+    if num > max_element:
+        max_element = num
+
+print("Largest element:", max_element)

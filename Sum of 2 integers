@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int getSum(int a, int b) {
+        while (b != 0) {
+            // carry now contains common set bits of a and b
+            unsigned carry = (unsigned)(a & b) << 1;
+            // sum of bits of a and b where at least one of the bits is not set
+            a = a ^ b;
+            // assign carry to b to be added in next iteration
+            b = carry;
+        }
+        return a;
+    }
+};
